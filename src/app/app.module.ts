@@ -3,13 +3,16 @@ import { BrowserModule }  from '@angular/platform-browser';
 import { FormsModule }    from '@angular/forms';
 
 import { HttpClientModule } from '@angular/common/http';
- 
+
 import { AppComponent }         from './app.component';
 import { WelcomeComponent }   from './welcome/welcome.component';
 import { UsersComponent }      from './users/users.component';
- 
+
+import {UserService} from "./user.service";
+
 import { AppRoutingModule }     from './app-routing.module';
- 
+
+
 @NgModule({
   imports: [
     BrowserModule,
@@ -22,6 +25,9 @@ import { AppRoutingModule }     from './app-routing.module';
     AppComponent,
     WelcomeComponent,
     UsersComponent
+  ],
+  providers: [
+    UserService
   ],
   bootstrap: [ AppComponent ]
 })

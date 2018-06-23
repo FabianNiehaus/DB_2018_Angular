@@ -1,7 +1,14 @@
 <h2>My Users</h2>
-<ul class="users">
-  <li *ngFor="let user of users">
-    <span class="badge">{{user.id}}</span> {{user.name}}
-  </li>
-</ul>
-
+<table class="users">
+  <tr *ngFor="let user of users">
+    <td>{{user.id}}</td>
+    <td>{{user.name}}</td>
+    <td>{{user.username}}</td>
+    <td>{{user.phone}}</td>
+    <td>{{user.email}}</td>
+    <td>{{user.website}}</td>
+    <td>{{user.address.street}}<br>{{user.address.suite}}<br>{{user.address.city}}<br>{{user.address.zipcode}}</td>
+    <td>{{user.address.geo.lat}}<br>{{user.address.geo.lng}}</td>
+    <td>{{user.company.name}}<br>{{user.company.catchPhrase}}<br>{{user.company.bs}}</td>
+  </tr>
+</table>
